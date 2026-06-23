@@ -6,6 +6,7 @@ function Gameboard() {
   const [bestScore, setBestScore] = useState(0);
   const [clickedCards, setClickedCards] = useState([]);
   const [howModal, setHowModal] = useState(false);
+  const [winModal, setWinModal] = useState(false);
 
   function shuffle(cards) {
     setCards(cards.sort(() => Math.random() - 0.5));
@@ -27,6 +28,11 @@ function Gameboard() {
       shuffle(cards);
       if (score + 1 > bestScore) {
         setBestScore(bestScore + 1);
+      }
+      if (clickedCards.length + 1 == cards.length) {
+        setWinModal(true);
+        setScore(0);
+        setClickedCards([]);
       }
     }
   }
@@ -81,6 +87,17 @@ function Gameboard() {
               <li>Your score resets if you click the same card twice</li>
               <li>Try to beat your best score!</li>
             </ul>
+          </div>
+        </div>
+      )}
+      {winModal && (
+        <div className="modal-overlay" onClick={() => setWinModal(false)}>
+          <div className="modal" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setWinModal(false)}>
+              ✕
+            </button>
+            <h2>I am so smart! S-M-R-T... wait, that's you.</h2>
+            <p>You win!</p>
           </div>
         </div>
       )}
