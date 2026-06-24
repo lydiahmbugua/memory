@@ -14,6 +14,11 @@ body {
   font-family: "Segoe UI", sans-serif;
   min-height: 100vh;
 }
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
 
 /* Nav */
 .nav {
@@ -174,4 +179,18 @@ body {
 
 .modal-close:hover {
   color: #e0e0e0;
+}
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .score-digit {
+    padding: 15px 8%;
+  }
 }
