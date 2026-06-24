@@ -46,7 +46,11 @@ function Gameboard() {
   return (
     <div className="container">
       <nav className="nav">
-        <h1>D'Oh! Memory</h1>
+        <div className="logo">
+          <img src="./public/maggie.svg" />
+          <h1>D'Oh! Memory</h1>
+        </div>
+
         <div className="buttons">
           <button onClick={() => setHowModal(true)}>How To Play</button>
           <button onClick={() => reset()}>Reset</button>
