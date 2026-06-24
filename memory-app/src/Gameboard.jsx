@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Card from "./Card";
+import maggie from "./assets/maggie.svg";
 function Gameboard() {
   const [cards, setCards] = useState([]);
   const [score, setScore] = useState(0);
@@ -47,7 +48,7 @@ function Gameboard() {
     <div className="container">
       <nav className="nav">
         <div className="logo">
-          <img src="./public/maggie.svg" />
+          <img src={maggie} />
           <h1>D'Oh! Memory</h1>
         </div>
 
