@@ -3,7 +3,7 @@
 A Simpsons-themed memory card matching game built with React.
 
 **Play Game:** [asimpsonsmemorygame.netlify.app](https://asimpsonsmemorygame.netlify.app)
-## [Live Demo]([https://youtu.be/hjVpLDoU9sA])
+## [Live Demo](https://youtu.be/hjVpLDoU9sA)
 
 
 ## About
